@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --page: #f1f1ef;
+  --card: #ffffff;
+  --card-2: #f7f7f5;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #7a7873;
+  --line: #e1e0d9;
+  --line-strong: #c3c2b7;
+  --nav: #141414;
+  --nav-2: #222221;
+  --accent: #c8102e;
+  --accent-ink: #ffffff;
+  --link: #1c5cab;
+  --series-1: #2a78d6;
+  --good: #006300;
+  --bad: #c62828;
+  --live: #d03b3b;
+  --seq-0: #f0efec;
+  --seq-1: #cde2fb;
+  --seq-2: #9ec5f4;
+  --seq-3: #6da7ec;
+  --seq-4: #3987e5;
+  --seq-5: #256abf;
+  --seq-6: #184f95;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --card: #1a1a19;
+    --card-2: #222221;
+    --ink: #f0efec;
+    --ink-2: #c3c2b7;
+    --muted: #898781;
+    --line: #2c2c2a;
+    --line-strong: #383835;
+    --nav: #000000;
+    --nav-2: #161616;
+    --accent: #e0263f;
+    --link: #86b6ef;
+    --series-1: #3987e5;
+    --good: #0ca30c;
+    --bad: #e66767;
+    --live: #e66767;
+    --seq-0: #222221;
+    --seq-1: #104281;
+    --seq-2: #184f95;
+    --seq-3: #1c5cab;
+    --seq-4: #256abf;
+    --seq-5: #2a78d6;
+    --seq-6: #3987e5;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --card: #1a1a19;
+  --card-2: #222221;
+  --ink: #f0efec;
+  --ink-2: #c3c2b7;
+  --muted: #898781;
+  --line: #2c2c2a;
+  --line-strong: #383835;
+  --nav: #000000;
+  --nav-2: #161616;
+  --accent: #e0263f;
+  --link: #86b6ef;
+  --series-1: #3987e5;
+  --good: #0ca30c;
+  --bad: #e66767;
+  --live: #e66767;
+  --seq-0: #222221;
+  --seq-1: #104281;
+  --seq-2: #184f95;
+  --seq-3: #1c5cab;
+  --seq-4: #256abf;
+  --seq-5: #2a78d6;
+  --seq-6: #3987e5;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-card: var(--card);
+  --color-card-2: var(--card-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-nav: var(--nav);
+  --color-nav-2: var(--nav-2);
+  --color-accent: var(--accent);
+  --color-link: var(--link);
+  --color-series-1: var(--series-1);
+  --color-good: var(--good);
+  --color-bad: var(--bad);
+  --color-live: var(--live);
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+html,
+body {
+  background: var(--page);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hide scrollbars on the horizontal score strip while keeping it scrollable. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
